@@ -1,3 +1,4 @@
+
 logLevel := Level.Warn
 
 addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.2")
@@ -10,3 +11,5 @@ addSbtPlugin("org.wartremover" % "sbt-wartremover" % "2.2.1")
 addSbtPlugin("com.lucidchart" % "sbt-scalafmt-coursier" % "1.12")
 
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.5")
+
+addSbtPlugin("io.stryker-mutator" % "sbt-stryker4s"        % "0.14.1")

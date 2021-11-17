@@ -6,13 +6,11 @@ scalaVersion in ThisBuild := "2.12.3"
 
 lazy val global = project
   .in(file("."))
-  .settings(settings)
-  .disablePlugins(AssemblyPlugin)
-  .aggregate(
-    common,
-    multi1,
-    multi2
+  .settings(
+    settings,
+    libraryDependencies ++= commonDependencies
   )
+  .disablePlugins(AssemblyPlugin)
 
 lazy val common = project
   .settings(
@@ -61,7 +59,7 @@ lazy val dependencies =
     val pureconfigV     = "0.8.0"
     val monocleV        = "1.4.0"
     val akkaV           = "2.5.6"
-    val scalatestV      = "3.0.4"
+    val scalatestV      = "3.1.1"
     val scalacheckV     = "1.13.5"
 
     val logback        = "ch.qos.logback"             % "logback-classic"          % logbackV
